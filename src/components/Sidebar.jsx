@@ -15,7 +15,7 @@ const Sidebar = () => {
             <NavLink to={'transaction'}>Transaction</NavLink>
           </ul>
 
-          <div className='flex flex-col gap-[12px]'>
+          <div className=' w-[100%] sidebar justify-center items-center    flex flex-col gap-2'>
             <h2 className='pl-4'>Account Management</h2>
             <NavLink to={'profile'}>Profile</NavLink>
             <NavLink to={'/auth'}>Logout</NavLink>
