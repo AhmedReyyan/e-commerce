@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+/* a:hover{
+  --tw-bg-opacity: 1;
+  color: rgb(163 230 53 / var(--tw-bg-opacity, 1)) ;
+} */
+
+
+/* add the code bellow */ 
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+ /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+}
+}
+
+
+button{
+  background-color: black;
+  color: white;
+  padding: 2%;
+  border-radius: 12px;
+}
+
+
+form > div{
+  width: 100%;
+}
+
+form > div > input{
+  width: 100%;
+  color: black;
+  border-radius: 8px;
+}
+a{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .li{
+  background-color: ;
+} */
+
+.active{
+  --tw-bg-opacity: 1;
+    background-color: rgb(163 230 53 / var(--tw-bg-opacity, 1)) ;
+    color: black;
+}
+
+.sidebar > a{
+   width: 80%;
+   padding: 2%;
+   border-radius: 12px;
+   transition: .2s;
+   
+
+   &:hover{
+    background-color: #a2e635c5;
+    color: black;
+   }
+}
+
+
+select{
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+
+td{
+  border:  2px solid #a2e63529;
+  padding: 2px;
+  text-align: center;
+
+}
+
+
+li{
+  list-style-type: none;
+  /* background: #752828; */
+  width: 20%;
+  text-align: center;
+  /* padding: 10px; */
+}
