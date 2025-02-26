@@ -6,11 +6,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Auth from './components/Auth.jsx'
 import Signup from './components/auth/Signup.jsx'
 import Login from './components/auth/Login.jsx'
+import Products from './components/Products.jsx'
 import Home from './components/Home.jsx'
-import Products from './components/products.jsx'
 import Orders from './components/Orders.jsx'
-import Transaction from './components/transaction.jsx'
 import Reviews from './components/Reviews.jsx'
+import Transaction from './components/Transaction.jsx'
+
 import SingleProduct from './components/SingleProduct.jsx'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import Cart from './components/Cart.jsx'
@@ -29,7 +30,7 @@ createRoot(document.getElementById('root')).render(
           </Route>
           <Route path='/home'  element={<Home/>}>
               <Route index element={<Products/>}></Route>
-              <Route path='products' element={<Products/>}></Route>
+              <Route path='products' element={<Products />}></Route>
               <Route path={`product/:id`}  element={<SingleProduct/>}></Route>
               <Route path='orders' element={<Orders/>}></Route>
               <Route path='transaction' element={<Transaction/>}></Route>
