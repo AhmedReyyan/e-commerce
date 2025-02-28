@@ -1,7 +1,19 @@
 import React from 'react'
 import CheckOut from './CheckOut'
+import Counter from './Counter'
+import { useDispatch, useSelector } from 'react-redux'
+import { decrement, increment } from '../Global/Counter'
 
 const Cart = () => {
+
+
+  const dispatch  = useDispatch()
+  const selector =  useSelector(state=>state.count.value)
+  const count =  useSelector(state=>state.count.initial)
+
+
+
+
   return (
     <div className='w-[84%]  h-[100%]  flex flex-col items-center mt-2 overflow-hidden'>
       <div className='w-[95%]'>
@@ -21,13 +33,26 @@ const Cart = () => {
                 <tr>
                     <td><img src="" alt="" />shirt</td>
                     <td>09898</td>
-                    <td>3</td>
+                    <td>
+                     <button onClick={()=>dispatch(decrement())}>-</button>
+                      
+                      {selector}
+                      <button onClick={()=>dispatch(increment())}>+</button>
+
+                      
+                      </td>
                     <td>$30</td>
                 </tr>
                 <tr>
                     <td>shirt</td>
                     <td>09898</td>
-                    <td>3</td>
+                    <td>
+                     <button onClick={()=>dispatch(decrement())}>-</button>
+                      
+
+                      
+                      </td>
+
                     <td>$30</td>
                 </tr>
                 <tr>

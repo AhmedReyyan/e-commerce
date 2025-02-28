@@ -94,3 +94,8 @@ li{
   text-align: center;
   /* padding: 10px; */
 }
+
+
+input{
+  padding: 5px;
+}
